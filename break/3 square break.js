@@ -3,15 +3,11 @@ Write a loop that goes from 1 to 100, but stops (using break) when it encounters
 */
 
 let num = 1;
-
 while (num <= 100) {
-  console.log(num);
-  // Calculate the square root of the current number
   let sqrt = Math.sqrt(num);
-  
-  // Check if the square root is an integer
-  if (sqrt === Math.floor(sqrt)) {
-    continue;
+  if (sqrt === Math.floor(sqrt) && num > 1) {
+    break;
   }
+  console.log(num);
   num++;
 }
